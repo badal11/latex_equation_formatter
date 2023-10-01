@@ -36,10 +36,10 @@ def process_file(input_file, mode):
         file.write(converted_latex)
 
 # Function to process all files in a directory
-def process_directory(directory, mode):
+def process_directory(directory, mode, filetype):
     for root, _, files in os.walk(directory):
         for filename in files:
-            if filename.endswith(".tex"):
+            if filename.endswith("." + filetype):
                 filepath = os.path.join(root, filename)
                 process_file(filepath, mode)
 
@@ -48,13 +48,17 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Convert LaTeX equations between formats.")
     parser.add_argument("mode", choices=["dedollarify", "dollarify"], help="Conversion mode (dedollarify &  dollarify LaTeX format)")
     parser.add_argument("path", help="File or directory path to process")
+    parser.add_argument("filetype", default="tex", help="file extention: tex, md, html, txt. default:tex")
+
+
+
 
     args = parser.parse_args()
 
     if os.path.isfile(args.path):
         process_file(args.path, args.mode)
     elif os.path.isdir(args.path):
-        process_directory(args.path, args.mode)
+        process_directory(args.path, args.mode, args.filetype)
     else:
         print(f"Invalid path: {args.path}")                 
 
