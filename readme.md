@@ -22,22 +22,22 @@ python converter.py <mode> <path>
 
 Examples:
 
-- To convert LaTeX equations in a single file to `\( ... \)` and `\[ ... \]` format:
+- To convert LaTeX equations in a single file from `$...$` and `$$...$$` to `\( ... \)` and `\[ ... \]` format:
 
 ```bash
-python converter.py to input.tex
+python converter.py dedollorify input.tex
 ```
 
-- To convert LaTeX equations in a single file back to `$...$` and `$$...$$` format:
+- To convert LaTeX equations in a single file from`\( ... \)` and `\[ ... \]` to `$...$` and `$$...$$` format:
 
 ```bash
-python converter.py from input.tex
+python converter.py dollorify input.tex
 ```
 
 - To convert LaTeX equations in all `.tex` files within a directory and its subdirectories:
 
 ```bash
-python converter.py to /path/to/directory
+python converter.py dedollorify /path/to/directory
 ```
 
 ### Unit Tests
