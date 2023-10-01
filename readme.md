@@ -45,7 +45,7 @@ python converter.py to /path/to/directory
 To ensure the correctness of the conversion functions, we have included unit tests. You can run them using the following command:
 
 ```bash
-python -m unittest basic_tests.py
+python -m unittest tests/basic_tests.py
 ```
 
 ## License
