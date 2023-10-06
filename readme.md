@@ -19,7 +19,7 @@ python converter.py <mode> <path> <filetype>
 
 - `<mode>`: The conversion mode, which can be either "dedollarify" or "dollarify" LaTeX format.
 - `<path>`: The file or directory path to process.
-- `<filetype>`: applies regex replacements to only files ending with this specified extension.  
+- `<filetype>`: applies regex replacements to only files ending with this specified extension.  Default is `tex`.
 
 Examples:
 
