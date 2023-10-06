@@ -26,19 +26,19 @@ Examples:
 - To convert LaTeX equations in a single file from `$...$` and `$$...$$` to `\( ... \)` and `\[ ... \]` format:
 
 ```bash
-python converter.py dedollorify input.tex tex
+python converter.py dedollarify input.tex tex
 ```
 
 - To convert LaTeX equations in a single file from`\( ... \)` and `\[ ... \]` to `$...$` and `$$...$$` format:
 
 ```bash
-python converter.py dollorify input.tex tex
+python converter.py dollarify input.tex tex
 ```
 
 - To convert LaTeX equations in all `.tex` files within a directory and its subdirectories:
 
 ```bash
-python converter.py dedollorify /path/to/directory md
+python converter.py dedollarify /path/to/directory md
 ```
 
 ### Unit Tests
