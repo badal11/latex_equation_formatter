@@ -1,3 +1,8 @@
+# My Notes
+copy the chatgpt markdown file into 1.md
+run this command by going to src folder from terminal: python converter.py dollarify chatgpt_dollarify/1.md md
+remember to do command+shift+c and command+shift+v to preserve formating in vscode to obsidian.
+
 # LaTeX Equation Formatter
 
 This Python script is a versatile tool for converting LaTeX equations between different formats. It allows you to easily switch between the following LaTeX equation formats:
